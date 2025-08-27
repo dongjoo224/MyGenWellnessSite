@@ -6,6 +6,8 @@ import Home from './pages/Home';
 import HowItWorks from './pages/HowItWorks';
 import Media from './pages/Media';
 import Login from './pages/Login';
+import Science from './pages/Science';
+import Community from './pages/Community';
 import Chatbot from './components/common/Chatbot';
 import './App.css';
 
@@ -19,8 +21,8 @@ function AppContent() {
         <Route path="/" element={<Login />} />
         <Route path="/how-it-works" element={<HowItWorks />} />
         <Route path="/home" element={<Home />} />
-        <Route path="/science" element={<div className="min-h-screen flex items-center justify-center"><h1 className="text-4xl">Science Page - Coming Soon</h1></div>} />
-        <Route path="/community" element={<div className="min-h-screen flex items-center justify-center"><h1 className="text-4xl">Community Page - Coming Soon</h1></div>} />
+        <Route path="/science" element={<Science />} />
+        <Route path="/community" element={<Community />} />
         <Route path="/media" element={<Media />} />
         {/* <Route path="/media" element={<div className="min-h-screen flex items-center justify-center"><h1 className="text-4xl">Media Page - Coming Soon</h1></div>} /> */}
         <Route path="/contact" element={<div className="min-h-screen flex items-center justify-center"><h1 className="text-4xl">Contact Page - Coming Soon</h1></div>} />

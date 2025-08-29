@@ -76,11 +76,11 @@ const HeroSection = () => {
       </div>
 
       {/* Hero Content */}
-      <div className="hero-content mt-24 relative z-30 text-left">
-        <div className="container">
-          <span className="beta-badge inline-block bg-cyan-500/20 border border-cyan-400/30 rounded-full px-4 py-2 text-cyan-400 text-sm font-medium mb-6">
+      <div className="hero-content mt-24 relative z-30 text-center">
+        <div className="container mx-auto px-6 max-w-6xl">
+          {/* <span className="beta-badge inline-block bg-cyan-500/20 border border-cyan-400/30 rounded-full px-4 py-2 text-cyan-400 text-sm font-medium mb-6">
             📱 Mobile App Beta
-          </span>
+          </span> */}
           
           <h1 className="hero-title text-5xl md:text-7xl font-black leading-tight mb-6">
             Democratizing<br />
@@ -91,7 +91,7 @@ const HeroSection = () => {
             using science and AI
           </h1>
           
-          <p className="hero-subtitle text-xl md:text-2xl text-gray-300 leading-relaxed mb-8 max-w-2xl mx-auto">
+          <p className="hero-subtitle text-xl md:text-2xl text-gray-300 leading-relaxed mb-8 max-w-4xl mx-auto">
             Transform your health with personalized, AI-powered wellness coaching.
             Build sustainable habits through tiny daily activities backed by science.
           </p>
@@ -103,18 +103,18 @@ const HeroSection = () => {
             </span>
           </div>
           
-          <div className="hero-actions flex flex-col sm:flex-row gap-4 justify-left mb-8">
-            <Button className="btn-primary-hero bg-gradient-to-r from-cyan-500 to-teal-500 hover:from-cyan-600 hover:to-teal-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105">
+          <div className="hero-actions flex flex-col sm:flex-row gap-4 justify-center mb-8">
+            {/* <Button className="btn-primary-hero bg-gradient-to-r from-cyan-500 to-teal-500 hover:from-cyan-600 hover:to-teal-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105">
               Join the Beta App by Invite
-            </Button>
+            </Button> */}
             <Button className="btn-secondary-hero bg-white/10 backdrop-blur-sm border border-white/20 text-white hover:bg-white/20 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300">
               Demo ▶
             </Button>
           </div>
           
-          <p className="trust-indicator text-gray-400 text-sm">
+          {/* <p className="trust-indicator text-gray-400 text-sm">
             Trusted by industry leaders and experts.
-          </p>
+          </p> */}
         </div>
       </div>
 

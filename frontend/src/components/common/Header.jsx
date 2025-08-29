@@ -40,9 +40,12 @@ const Header = () => {
             <Link to="/media" className="nav-link-minimal text-white hover:text-cyan-400 transition-colors">
               Media
             </Link>
-            <Link to="/contact" className="nav-link-minimal text-white hover:text-cyan-400 transition-colors">
-              Contact
+            <Link to="/team" className="nav-link-minimal text-white hover:text-cyan-400 transition-colors">
+              Team
             </Link>
+            {/* <Link to="/contact" className="nav-link-minimal text-white hover:text-cyan-400 transition-colors">
+              Contact
+            </Link> */}
           </nav>
           
           {/* Mobile menu toggle button */}
@@ -93,13 +96,13 @@ const Header = () => {
               >
                 About
               </Link>
-              <Link 
+              {/* <Link 
                 to="/contact" 
                 className="nav-link-minimal text-white hover:text-cyan-400 transition-colors"
                 onClick={toggleMobileMenu}
               >
                 Contact
-              </Link>
+              </Link> */}
             </div>
           </nav>
         )}

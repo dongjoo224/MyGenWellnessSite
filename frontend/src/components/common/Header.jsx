@@ -20,7 +20,7 @@ const Header = () => {
               alt="MyGen Wellness Logo" 
               className="h-9 mr-2"
             />
-            <span className="logo-text-minimal text-white text-xl font-bold">MyGen</span>
+            {/* <span className="logo-text-minimal text-white text-xl font-bold"></span> */}
           </Link>
           
           {/* Desktop navigation menu */}

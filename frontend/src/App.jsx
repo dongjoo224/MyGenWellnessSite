@@ -27,7 +27,7 @@ function AppContent() {
         <Route path="/team" element={<Team />} />
         <Route path="/media" element={<Media />} />
         {/* <Route path="/media" element={<div className="min-h-screen flex items-center justify-center"><h1 className="text-4xl">Media Page - Coming Soon</h1></div>} /> */}
-        <Route path="/contact" element={<div className="min-h-screen flex items-center justify-center"><h1 className="text-4xl">Contact Page - Coming Soon</h1></div>} />
+        {/* <Route path="/contact" element={<div className="min-h-screen flex items-center justify-center"><h1 className="text-4xl">Contact Page - Coming Soon</h1></div>} /> */}
         <Route path="/privacy" element={<div className="min-h-screen flex items-center justify-center"><h1 className="text-4xl">Privacy Page - Coming Soon</h1></div>} />
         <Route path="/terms" element={<div className="min-h-screen flex items-center justify-center"><h1 className="text-4xl">Terms Page - Coming Soon</h1></div>} />
       </Routes>

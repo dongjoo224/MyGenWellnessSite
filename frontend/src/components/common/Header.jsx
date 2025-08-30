@@ -16,7 +16,7 @@ const Header = () => {
           {/* Logo and brand name */}
           <Link to="/" className="logo-minimal flex items-center">
             <img 
-              src="/src/public/images/mygen_wellness_logo.png" 
+              src="/images/mygen_wellness_logo.png" 
               alt="MyGen Wellness Logo" 
               className="h-9 mr-2"
             />

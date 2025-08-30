@@ -25,7 +25,7 @@ const Login = () => {
         <div className="mt-8 mb-8">
           <Link to="/" className="logo-minimal flex justify-center">
             <img 
-              src="/src/public/images/mygen_wellness_logo.png" 
+              src="/images/mygen_wellness_logo.png" 
               alt="MyGen Wellness Logo" 
               className="h-9 mr-2"
             />

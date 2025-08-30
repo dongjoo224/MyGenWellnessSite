@@ -16,13 +16,13 @@ const HeroSection = () => {
   ];
 
   const slides = [
-    { src: '/src/public/images/drinkingwater.jpg', name: 'Drinking Water' },
-    { src: '/src/public/images/fasting.jpg', name: 'Intermittent Fasting' },
-    { src: '/src/public/images/meditation.jpg', name: 'Meditating' },
-    { src: '/src/public/images/nutritiousmeal.jpg', name: 'Nutritious Meals' },
-    { src: '/src/public/images/sleep.jpg', name: 'Quality Sleep' },
-    { src: '/src/public/images/walking.jpg', name: 'Walking' },
-    { src: '/src/public/images/yoga.jpg', name: 'Yoga & Stretching' }
+    { src: '/images/drinkingwater.jpg', name: 'Drinking Water' },
+    { src: '/images/fasting.jpg', name: 'Intermittent Fasting' },
+    { src: '/images/meditation.jpg', name: 'Meditating' },
+    { src: '/images/nutritiousmeal.jpg', name: 'Nutritious Meals' },
+    { src: '/images/sleep.jpg', name: 'Quality Sleep' },
+    { src: '/images/walking.jpg', name: 'Walking' },
+    { src: '/images/yoga.jpg', name: 'Yoga & Stretching' }
   ];
 
   // Auto-rotate habits and slides

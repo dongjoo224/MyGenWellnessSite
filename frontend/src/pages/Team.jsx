@@ -43,7 +43,7 @@ const Team = () => {
             <div className="team-member-card bg-gray-900 rounded-lg p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105">
               <div className="mb-6">
                 <img 
-                  src="/src/public/images/Charles_Kwon_Headshot.jpg" 
+                  src="/images/Charles_Kwon_Headshot.jpg" 
                   alt="Charles Kwon" 
                   className="w-32 h-32 rounded-full mx-auto object-cover border-4 border-indigo-500/20"
                 />
@@ -68,7 +68,7 @@ const Team = () => {
             <div className="team-member-card bg-gray-900 rounded-lg p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105">
               <div className="mb-6">
                 <img 
-                  src="/src/public/images/Robert_Headshot.jpg" 
+                  src="/images/Robert_Headshot.jpg" 
                   alt="Robert L. Grossman" 
                   className="w-32 h-32 rounded-full mx-auto object-cover border-4 border-indigo-500/20"
                 />

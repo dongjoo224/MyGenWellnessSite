@@ -39,19 +39,19 @@ const Science = () => {
           </div>
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="flex flex-col items-center">
-              <img src="/src/assets/images/chronic_disease_bar_chart.png" alt="Chronic Disease Bar Chart" className="w-full max-w-md rounded-lg shadow-lg" />
+              <img src="/src/public/images/chronic_disease_bar_chart.png" alt="Chronic Disease Bar Chart" className="w-full max-w-md rounded-lg shadow-lg" />
               <p className="text-sm text-gray-400 mt-4 text-center">Chronic Disease = Premature deaths. 70% of deaths in the US are caused by chronic disease, 90% of healthcare dollars in US spent on chronic disease, 60% of US adults have at least one chronic disease, 40% of US adults have 2 or more chronic diseases.</p>
             </div>
             <div className="flex flex-col items-center">
-              <img src="/src/assets/images/chronic_disease_accelerating_bar_chart.png" alt="Chronic Disease Accelerating Bar Chart" className="w-full max-w-md rounded-lg shadow-lg" />
+              <img src="/src/public/images/chronic_disease_accelerating_bar_chart.png" alt="Chronic Disease Accelerating Bar Chart" className="w-full max-w-md rounded-lg shadow-lg" />
               <p className="text-sm text-gray-400 mt-4 text-center">Chronic Disease Accelerating. Old chart 157M in 2020, new number 176M – 156 adults and 20M children.</p>
             </div>
             <div className="flex flex-col items-center">
-              <img src="/src/assets/images/wellness_spending_bar_chart.png" alt="Wellness Spending Bar Chart" className="w-full max-w-md rounded-lg shadow-lg" />
+              <img src="/src/public/images/wellness_spending_bar_chart.png" alt="Wellness Spending Bar Chart" className="w-full max-w-md rounded-lg shadow-lg" />
               <p className="text-sm text-gray-400 mt-4 text-center">Global Wellness Spending $5.5 Trillion/Year. Note: Global Health Care spending is $10 Trillion of which 75-90% is spent on chronic disease.</p>
             </div>
             <div className="flex flex-col items-center">
-              <img src="/src/assets/images/healthy_lifestyle_pie_chart.png" alt="Healthy Lifestyle Pie Chart" className="w-full max-w-md rounded-lg shadow-lg" />
+              <img src="/src/public/images/healthy_lifestyle_pie_chart.png" alt="Healthy Lifestyle Pie Chart" className="w-full max-w-md rounded-lg shadow-lg" />
               <p className="text-sm text-gray-400 mt-4 text-center">Poor Report Card, only 2.7% Live Healthy Lifestyle. Note: Healthy Lifestyle as measured by four variables – not smoking, not obese, good nutrition and moderate exercise.</p>
             </div>
           </div>
@@ -156,7 +156,7 @@ const Science = () => {
             <div className="flex justify-center">
               {/* Placeholder for a habit-building diagram */}
               <div className="w-full max-w-md h-64 bg-gray-800 rounded-lg flex items-center justify-center text-gray-400 text-center p-4">
-                <img src="/src/assets/images/small_steps.jpg" alt="Small Steps Image" className="w-full max-w-md rounded-lg shadow-lg" />
+                <img src="/src/public/images/small_steps.jpg" alt="Small Steps Image" className="w-full max-w-md rounded-lg shadow-lg" />
                 {/* [Placeholder for a diagram illustrating habit stacking or making habits easy] */}
               </div>
             </div>
@@ -176,7 +176,7 @@ const Science = () => {
               controls
               preload="metadata"
             >
-              <source src="/src/assets/images/MyGen_Science_Video.mp4" type="video/mp4" />
+              <source src="/src/public/images/MyGen_Science_Video.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>

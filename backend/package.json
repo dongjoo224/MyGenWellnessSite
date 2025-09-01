@@ -18,11 +18,12 @@
   "author": "MyGen Wellness Team",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.18.2",
     "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
     "helmet": "^7.0.0",
     "morgan": "^1.10.0",
-    "dotenv": "^16.3.1"
+    "node-fetch": "^2.7.0"
   },
   "devDependencies": {
     "nodemon": "^3.0.1"
@@ -31,4 +32,3 @@
     "node": ">=16.0.0"
   }
 }
-

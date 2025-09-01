@@ -7,7 +7,7 @@ const Chatbot = () => {
   const [messages, setMessages] = useState([
     {
       id: 1,
-      text: "Hi! I'm your MyGen AI assistant. How can I help you today?",
+      text: "I'm MyGenie, an AI assistant focused on wellness. If you have any questions about MyGen or healthy living, I can assist you. How can I help?",
       isBot: true,
       timestamp: new Date()
     }

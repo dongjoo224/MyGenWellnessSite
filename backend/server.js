@@ -77,6 +77,7 @@ app.post('/api/contact', (req, res) => {
 app.post('/api/chat', async (req, res) => {
   const { message, userId } = req.body;
   const apiKey = process.env.OPENAI_API_KEY;
+  // const assistantId = process.env.ASSISTANT_ID;
 
   if (!apiKey) {
     return res.status(401).json({

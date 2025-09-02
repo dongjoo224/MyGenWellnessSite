@@ -62,10 +62,13 @@ const Science = () => {
       <section className="py-24 bg-black">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl md:text-5xl font-black leading-tight mb-6">
-            Short term steps, <span className="gradient-text-green bg-gradient-to-r from-green-400 to-lime-400 bg-clip-text text-transparent">lasting impact</span>
+            The Power of the <span className="gradient-text-green bg-gradient-to-r from-green-400 to-lime-400 bg-clip-text text-transparent">5 Do's</span>
           </h2>
           <p className="text-xl text-gray-300 leading-relaxed mb-12 max-w-3xl mx-auto">
-            MyGen's core philosophy revolves around the 5 Do's, simple yet profound actions that directly stimulate your body's natural production of 'feel-good' hormones. Every time you engage in these habits, you get a powerful chunk of these vital neurochemicals.
+            MyGen's core philosophy revolves around the 
+
+
+5 Do's, simple yet profound actions that directly stimulate your body's natural production of 'feel-good' hormones. Every time you engage in these habits, you get a powerful chunk of these vital neurochemicals.
           </p>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             <div className="p-6 bg-gray-900 rounded-lg shadow-lg flex flex-col items-center text-center">
@@ -90,9 +93,9 @@ const Science = () => {
             </div>
             <div className="p-6 bg-gray-900 rounded-lg shadow-lg flex flex-col items-center text-center">
               <FlaskConical className="w-12 h-12 text-blue-400 mb-4" />
-              <h3 className="text-2xl font-bold mb-2">Melatonin</h3>
-              <p className="text-gray-300">The sleep regulator. Helps align your circadian rhythm, promoting deep rest and recovery so you wake up refreshed and energized.</p>
-              </div>
+              <h3 className="text-2xl font-bold mb-2">Endocannabinoids</h3>
+              <p className="text-gray-300">The bliss molecules. Contribute to feelings of calm, contentment, and overall balance, often stimulated by mindful practices.</p>
+            </div>
           </div>
         </div>
       </section>
@@ -110,19 +113,61 @@ const Science = () => {
             <div className="p-6 bg-gray-800 rounded-lg shadow-lg">
               <h3 className="text-3xl font-bold mb-4 text-blue-300">Short-Term Effects</h3>
               <p className="text-gray-300 leading-relaxed">
-                Experience an immediate surge of positive feelings and energy. Our 5 Do's instantly trigger the release of feel-good hormones, leading to improved mood, reduced stress, and enhanced focus within minutes of practice.
+                Experience an immediate surge of positive feelings and energy. Our 5 Do\'s instantly trigger the release of feel-good hormones, leading to improved mood, reduced stress, and enhanced focus within minutes of practice.
               </p>
             </div>
             <div className="p-6 bg-gray-800 rounded-lg shadow-lg">
               <h3 className="text-3xl font-bold mb-4 text-cyan-300">Mid-Term Effects</h3>
               <p className="text-gray-300 leading-relaxed">
-                Within weeks to months, you'll notice a significant, tangible difference in your mental and physical well-being. This includes sustained energy levels, better sleep quality, clearer thinking, and a noticeable reduction in everyday aches and pains.
+                Within weeks to months, you\'ll notice a significant, tangible difference in your mental and physical well-being. This includes sustained energy levels, better sleep quality, clearer thinking, and a noticeable reduction in everyday aches and pains.
               </p>
             </div>
             <div className="p-6 bg-gray-800 rounded-lg shadow-lg">
               <h3 className="text-3xl font-bold mb-4 text-purple-300">Long-Term Effects</h3>
               <p className="text-gray-300 leading-relaxed">
                 Consistent application of MyGen habits leads to profound, lasting changes. This includes reversing biological age, significantly reducing the risk of chronic diseases, increasing overall longevity, and cultivating a deep sense of sustained happiness and vitality.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* MyGen Research & Video Insights */}
+      <section className="py-24 bg-black">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4xl md:text-5xl font-black leading-tight mb-6">
+            MyGen Research: <span className="gradient-text-green bg-gradient-to-r from-green-400 to-teal-400 bg-clip-text text-transparent">Insights & Action</span>
+          </h2>
+          <p className="text-xl text-gray-300 leading-relaxed mb-12 max-w-3xl mx-auto">
+            Dive deeper into the science behind MyGen Wellness with our exclusive podcast and see the principles in action through our insightful video exploring the profound impact of tiny wellness activities, the concept of a wellness digital twin, and groundbreaking research on racket sports as a longevity gold standard..
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            {/* Podcast Section */}
+            <div className="bg-gray-900 rounded-lg p-8 shadow-lg flex flex-col">
+              <h3 className="text-2xl font-bold mb-4">Your Digital Twin: Hacking Longevity with Racket Sports and Precision Wellness</h3>
+              <audio controls className="w-full mb-4">
+                <source src="/audios/Racket_Sports_Podcast.m4a" type="audio/mp4" />
+                Your browser does not support the audio element.
+              </audio>
+              <p className="text-sm text-gray-400 text-center flex-grow">
+                This podcast presents a framework for generating synthetic wellness and aging data, highlighting how lifestyle factors—especially racket sports like tennis and pickleball—extend longevity. It integrates “Tiny Wellness Activities” and “Do Less” risk behaviors with biomarkers of aging, social connection, and purpose, drawing on Blue Zones research and longitudinal studies to enable precision longevity planning and evidence-based public health guidance.              </p>
+            </div>
+
+            {/* Video Section */}
+            <div className="bg-gray-900 rounded-lg p-8 shadow-lg flex flex-col">
+              <h3 className="text-2xl font-bold mb-4">See MyGen in Action</h3>
+              <div className="relative rounded-lg overflow-hidden shadow-xl bg-gray-800 w-full mb-4">
+                <video 
+                  className="w-full h-auto"
+                  controls
+                  preload="metadata"
+                >
+                  <source src="/audios/Racket_Sports_Video.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <p className="text-sm text-gray-400 text-left flex-grow">
+                Discover how MyGen transforms wellness through science-backed micro-habits. This video provides a visual overview of our approach, demonstrating the simplicity and effectiveness of integrating tiny wellness activities into your daily life for long-term health benefits.
               </p>
             </div>
           </div>
@@ -146,18 +191,16 @@ const Science = () => {
               </p>
               <h3 className="text-3xl font-bold mb-4">Anchor to Existing Routines</h3>
               <p className="text-gray-300 leading-relaxed">
-                We utilize the power of habit stacking, anchoring new desired behaviors to habits you already perform daily. This creates natural triggers and makes the new habit feel like a seamless extension of your routine, rather than an added chore.
-              </p>
-              <h3 className="text-3xl font-bold mb-4">Small Reminders and Daily Nudges</h3>
-              <p className="text-gray-300 leading-relaxed">
-                  Gentle prompts delivered at the right time keep you on track without overwhelming you. These small cues reinforce consistency, helping your habits stick while fitting naturally into your day.
+                We utilize the power of 
+
+
+habit stacking, anchoring new desired behaviors to habits you already perform daily. This creates natural triggers and makes the new habit feel like a seamless extension of your routine, rather than an added chore.
               </p>
             </div>
             <div className="flex justify-center">
               {/* Placeholder for a habit-building diagram */}
               <div className="w-full max-w-md h-64 bg-gray-800 rounded-lg flex items-center justify-center text-gray-400 text-center p-4">
-                <img src="/images/small_steps.jpg" alt="Small Steps Image" className="w-full max-w-md rounded-lg shadow-lg" />
-                {/* [Placeholder for a diagram illustrating habit stacking or making habits easy] */}
+                [Placeholder for a diagram illustrating habit stacking or making habits easy]
               </div>
             </div>
           </div>
@@ -176,7 +219,7 @@ const Science = () => {
               controls
               preload="metadata"
             >
-              <source src="/images/MyGen_Science_Video.mp4" type="video/mp4" />
+              <source src="/audios/MyGen_Science_Video.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>
@@ -190,7 +233,7 @@ const Science = () => {
       <section className="py-24 bg-gradient-to-t from-gray-900 to-black text-center">
         <div className="container mx-auto px-4 max-w-3xl">
           <h2 className="text-4xl md:text-5xl font-black leading-tight mb-6">
-            Your Journey to <span className="gradient-text-gold bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">Longevity and Vitality</span>
+            Your <span className="gradient-text-gold bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">Personalized Scientific Journey</span>
           </h2>
           <p className="text-xl text-gray-300 leading-relaxed mb-8">
             MyGen is more than an app; it's your personal guide, rooted in the latest scientific understanding of human biology and behavior. We empower you to harness your body's innate capabilities, build lasting habits, and unlock a future of vibrant health and well-being.

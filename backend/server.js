@@ -2,6 +2,8 @@ const express = require('express');
 const cors = require('cors');
 const helmet = require('helmet');
 const morgan = require('morgan');
+const fs = require('fs').promises;
+const path = require('path');
 require('dotenv').config();
 const fetch = require('node-fetch');
 
@@ -53,6 +55,87 @@ app.post('/api/beta-invitation', (req, res) => {
       status: 'pending'
     }
   });
+});
+
+// Waitlist registration endpoint
+app.post('/api/waitlist', async (req, res) => {
+  try {
+    const { name, email, phone, timestamp } = req.body;
+    
+    // Validate required fields
+    if (!name || !email) {
+      return res.status(400).json({
+        success: false,
+        message: 'Name and email are required'
+      });
+    }
+
+    // Create waitlist data object
+    const waitlistEntry = {
+      name: name.trim(),
+      email: email.trim().toLowerCase(),
+      phone: phone ? phone.trim() : '',
+      timestamp: timestamp || new Date().toISOString(),
+      id: Date.now().toString() // Simple ID generation
+    };
+
+    // Define the file path for waitlist data
+    const dataDir = path.join(__dirname, 'data');
+    const filePath = path.join(dataDir, 'waitlist.json');
+
+    // Ensure the data directory exists
+    try {
+      await fs.mkdir(dataDir, { recursive: true });
+    } catch (error) {
+      // Directory might already exist, that's okay
+    }
+
+    // Read existing data or create empty array
+    let existingData = [];
+    try {
+      const fileContent = await fs.readFile(filePath, 'utf8');
+      existingData = JSON.parse(fileContent);
+    } catch (error) {
+      // File doesn't exist yet, start with empty array
+      existingData = [];
+    }
+
+    // Check if email already exists
+    const emailExists = existingData.some(entry => entry.email === waitlistEntry.email);
+    if (emailExists) {
+      return res.status(409).json({
+        success: false,
+        message: 'Email already registered for the waitlist'
+      });
+    }
+
+    // Add new entry to the beginning of the array
+    existingData.unshift(waitlistEntry);
+
+    // Write updated data back to file
+    await fs.writeFile(filePath, JSON.stringify(existingData, null, 2));
+
+    // Also log to console
+    console.log('Waitlist registration:', waitlistEntry);
+
+    res.json({
+      success: true,
+      message: 'Successfully registered for the waitlist!',
+      data: {
+        id: waitlistEntry.id,
+        email: waitlistEntry.email,
+        name: waitlistEntry.name,
+        timestamp: waitlistEntry.timestamp
+      }
+    });
+
+  } catch (error) {
+    console.error('Waitlist registration error:', error);
+    res.status(500).json({
+      success: false,
+      message: 'Internal server error'
+    });
+  }
 });
 
 // Contact form endpoint

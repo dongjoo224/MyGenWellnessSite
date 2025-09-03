@@ -1,12 +1,18 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, MessageCircle } from 'lucide-react';
+import { Menu, X, MessageCircle, LogOut } from 'lucide-react';
+import { useAuth } from '../../contexts/AuthContext';
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { logout } = useAuth();
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const handleLogout = async () => {
+    await logout();
   };
 
   return (
@@ -25,7 +31,7 @@ const Header = () => {
           
           {/* Desktop navigation menu */}
           <nav className="nav-menu-minimal hidden md:flex items-center space-x-8">
-            <Link to="/" className="nav-link-minimal text-white hover:text-cyan-400 transition-colors">
+            <Link to="/home" className="nav-link-minimal text-white hover:text-cyan-400 transition-colors">
               Home
             </Link>
             <Link to="/how-it-works" className="nav-link-minimal text-white hover:text-cyan-400 transition-colors">
@@ -43,9 +49,22 @@ const Header = () => {
             <Link to="/team" className="nav-link-minimal text-white hover:text-cyan-400 transition-colors">
               Team
             </Link>
+            <Link to="/dashboard" className="nav-link-minimal text-white hover:text-purple-400 transition-colors font-semibold">
+              Dashboard
+            </Link>
             {/* <Link to="/contact" className="nav-link-minimal text-white hover:text-cyan-400 transition-colors">
               Contact
             </Link> */}
+            
+            {/* Logout button */}
+            <button 
+              onClick={handleLogout}
+              className="nav-link-minimal text-white hover:text-red-400 transition-colors flex items-center gap-2"
+              title="Logout"
+            >
+              <LogOut size={18} />
+              Logout
+            </button>
           </nav>
           
           {/* Mobile menu toggle button */}
@@ -96,6 +115,13 @@ const Header = () => {
               >
                 About
               </Link>
+              <Link 
+                to="/dashboard" 
+                className="nav-link-minimal text-white hover:text-purple-400 transition-colors font-semibold"
+                onClick={toggleMobileMenu}
+              >
+                Dashboard
+              </Link>
               {/* <Link 
                 to="/contact" 
                 className="nav-link-minimal text-white hover:text-cyan-400 transition-colors"
@@ -103,6 +129,18 @@ const Header = () => {
               >
                 Contact
               </Link> */}
+              
+              {/* Mobile logout button */}
+              <button 
+                onClick={() => {
+                  toggleMobileMenu();
+                  handleLogout();
+                }}
+                className="nav-link-minimal text-white hover:text-red-400 transition-colors flex items-center gap-2 text-left"
+              >
+                <LogOut size={18} />
+                Logout
+              </button>
             </div>
           </nav>
         )}

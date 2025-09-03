@@ -50,9 +50,9 @@ const Community = () => {
             </div>
             <div className="flex justify-center">
               {/* Placeholder for a community diagram */}
-              <div className="w-full max-w-md h-64 bg-gray-800 rounded-lg flex items-center justify-center text-gray-400 text-center p-4">
-                [Placeholder for a diagram illustrating Guild 2.0 community model]
-              </div>
+              {/* <div className="w-full max-w-md h-64 bg-gray-800 rounded-lg flex items-center justify-center text-gray-400 text-center p-4"> */}
+                <img src="/images/Community_image.png" alt="Wellness Spending Bar Chart" className="w-full max-w-md rounded-lg shadow-lg" />
+              {/* </div> */}
             </div>
           </div>
         </div>
@@ -99,10 +99,10 @@ backed by "shirox", a testament to their real-world value and stability.</p>
           <p className="text-xl text-gray-300 leading-relaxed mb-8">
             Become part of a revolutionary wellness movement. Experience the power of collective ownership, cutting-edge AI, and a supportive community dedicated to transforming lives.
           </p>
-          <button className="btn-primary-large bg-gradient-to-r from-blue-500 to-green-500 hover:from-blue-600 hover:to-green-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105">
-            <span>Join the MyGen Community</span>
+          {/* <button className="btn-primary-large bg-gradient-to-r from-blue-500 to-green-500 hover:from-blue-600 hover:to-green-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105">
+            <span>Register for Our Waitlist</span>
             <span className="ml-2">→</span>
-          </button>
+          </button> */}
         </div>
       </section>
     </main>

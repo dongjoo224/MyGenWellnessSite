@@ -7,10 +7,15 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="footer-content-minimal flex flex-col md:flex-row items-center justify-between">
           <div className="footer-logo-minimal flex items-center mb-4 md:mb-0">
-            <div className="logo-icon-minimal w-8 h-8 bg-gradient-to-r from-cyan-400 to-cyan-600 rounded-lg flex items-center justify-center text-white font-bold mr-2">
-              M
-            </div>
-            <span className="logo-text-minimal text-white text-lg font-bold">MyGen Wellness</span>
+            <img 
+              src="/images/mygen_wellness_logo.png" 
+              alt="MyGen Wellness Logo" 
+              className="h-9 mr-2"
+            />
+            {/* // <div className="logo-icon-minimal w-8 h-8 bg-gradient-to-r from-cyan-400 to-cyan-600 rounded-lg flex items-center justify-center text-white font-bold mr-2">
+            //   M
+            // </div>
+            // <span className="logo-text-minimal text-white text-lg font-bold">MyGen Wellness</span> */}
           </div>
           
           <div className="footer-links-minimal flex space-x-6 mb-4 md:mb-0">

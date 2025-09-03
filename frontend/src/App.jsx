@@ -1,7 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { AuthProvider } from './contexts/AuthContext';
 import Header from './components/common/Header';
 import Footer from './components/common/Footer';
+import ProtectedRoute from './components/common/ProtectedRoute';
 import Home from './pages/Home';
 import HowItWorks from './pages/HowItWorks';
 import Media from './pages/Media';
@@ -9,6 +11,7 @@ import Login from './pages/Login';
 import Science from './pages/Science';
 import Community from './pages/Community';
 import Team from './pages/Team';
+import Dashboard from './pages/Dashboard';
 import Chatbot from './components/common/Chatbot';
 import './App.css';
 
@@ -26,6 +29,12 @@ function AppContent() {
         <Route path="/community" element={<Community />} />
         <Route path="/team" element={<Team />} />
         <Route path="/media" element={<Media />} />
+        {/* Protected route - only accessible to authenticated users */}
+        <Route path="/dashboard" element={
+          <ProtectedRoute>
+            <Dashboard />
+          </ProtectedRoute>
+        } />
         {/* <Route path="/media" element={<div className="min-h-screen flex items-center justify-center"><h1 className="text-4xl">Media Page - Coming Soon</h1></div>} /> */}
         {/* <Route path="/contact" element={<div className="min-h-screen flex items-center justify-center"><h1 className="text-4xl">Contact Page - Coming Soon</h1></div>} /> */}
         <Route path="/privacy" element={<div className="min-h-screen flex items-center justify-center"><h1 className="text-4xl">Privacy Page - Coming Soon</h1></div>} />
@@ -40,7 +49,9 @@ function AppContent() {
 function App() {
   return (
     <Router>
-      <AppContent />
+      <AuthProvider>
+        <AppContent />
+      </AuthProvider>
     </Router>
   );
 }

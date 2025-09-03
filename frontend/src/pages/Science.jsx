@@ -198,10 +198,7 @@ habit stacking, anchoring new desired behaviors to habits you already perform da
               </p>
             </div>
             <div className="flex justify-center">
-              {/* Placeholder for a habit-building diagram */}
-              <div className="w-full max-w-md h-64 bg-gray-800 rounded-lg flex items-center justify-center text-gray-400 text-center p-4">
-                [Placeholder for a diagram illustrating habit stacking or making habits easy]
-              </div>
+              <img src="/images/Habit_stacking.png" alt="Wellness Spending Bar Chart" className="w-full max-w-md rounded-lg shadow-lg" />
             </div>
           </div>
         </div>
@@ -238,10 +235,10 @@ habit stacking, anchoring new desired behaviors to habits you already perform da
           <p className="text-xl text-gray-300 leading-relaxed mb-8">
             MyGen is more than an app; it's your personal guide, rooted in the latest scientific understanding of human biology and behavior. We empower you to harness your body's innate capabilities, build lasting habits, and unlock a future of vibrant health and well-being.
           </p>
-          <button className="btn-primary-large bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105">
-            <span>Start Your MyGen Journey</span>
+          {/* <button className="btn-primary-large bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105">
+            <span>Register for Our Waitlist</span>
             <span className="ml-2">→</span>
-          </button>
+          </button> */}
         </div>
       </section>
     </main>

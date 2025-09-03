@@ -79,7 +79,7 @@ const Chatbot = () => {
       {/* Chat Sidebar */}
       <div className={`ai-chat-sidebar fixed top-0 right-0 w-80 h-full bg-gray-900 border-l-2 border-orange-500 shadow-2xl z-50 flex flex-col transform transition-transform duration-300 ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
         <div className="ai-chat-header bg-gradient-to-r from-orange-500 to-orange-400 text-white font-bold text-lg p-4 flex items-center justify-between border-b border-orange-400">
-          <span>AI Chatbot</span>
+          <span>MyGenie</span>
           <button 
             onClick={toggleSidebar}
             className="ai-chat-close text-white hover:bg-white/20 rounded-full p-1 transition-colors"

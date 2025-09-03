@@ -53,7 +53,7 @@ const ProblemSection = () => {
             </div>
           </div>
           
-          <div className="struggle-visual">
+          {/* <div className="struggle-visual">
             <div className="broken-cycle-minimal flex flex-col md:flex-row items-center justify-center gap-8 max-w-4xl mx-auto">
               <div className="cycle-node flex flex-col items-center text-center p-6 bg-gray-800/50 rounded-2xl border border-gray-700">
                 <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center mb-4">
@@ -95,7 +95,7 @@ const ProblemSection = () => {
                 <span className="text-white font-semibold">Try Again</span>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

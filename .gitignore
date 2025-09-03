@@ -7,6 +7,9 @@ backend/.env
 .env.test.local
 .env.production.local
 
+# Data
+backend/data/.json
+
 # Node.js dependencies
 node_modules/
 

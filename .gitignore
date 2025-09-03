@@ -8,7 +8,9 @@ backend/.env
 .env.production.local
 
 # Data
-backend/data/.json
+backend/data/*.json
+backend/data/waitlist.json
+*.json
 
 # Node.js dependencies
 node_modules/

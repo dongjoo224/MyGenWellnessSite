@@ -1,9 +1,43 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { MapPin, Rocket } from 'lucide-react';
 import ProcessSteps from '../components/sections/ProcessSteps.jsx';
 import BenefitsSection from '../components/sections/BenefitsSection.jsx';
 
 const HowItWorks = () => {
+  // Load Voiceflow chat widget
+  useEffect(() => {
+    (function(d, t) {
+      var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+      v.onload = function() {
+        if (window.voiceflow && window.voiceflow.chat) {
+          window.voiceflow.chat.load({
+            verify: { projectID: '67557ed265738b8d1a34bf38' },
+            url: 'https://general-runtime.voiceflow.com',
+            versionID: 'production',
+            voice: {
+              url: "https://runtime-api.voiceflow.com"
+            },
+            render: {
+              mode: 'embedded',
+              target: document.getElementById('voiceflow-chat')
+            }
+          });
+        }
+      };
+      v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs"; 
+      v.type = "text/javascript"; 
+      s.parentNode.insertBefore(v, s);
+    })(document, 'script');
+
+    // Cleanup function
+    return () => {
+      const existingScript = document.querySelector('script[src="https://cdn.voiceflow.com/widget-next/bundle.mjs"]');
+      if (existingScript) {
+        existingScript.remove();
+      }
+    };
+  }, []);
+
   return (
     <main className="min-h-screen bg-black text-white">
       {/* Hero Section */}
@@ -36,6 +70,17 @@ const HowItWorks = () => {
               <div className="scroll-dot w-2 h-2 bg-cyan-400 rounded-full"></div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Voiceflow Chat Widget Container */}
+      <section className="voiceflow-section py-12 bg-gray-900">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold text-white mb-4">Chat with Our AI Assistant</h2>
+            <p className="text-gray-300">Get personalized guidance on your wellness journey</p>
+          </div>
+          <div id="voiceflow-chat" className="max-w-4xl mx-auto bg-gray-800 rounded-2xl p-6 min-h-[400px]"></div>
         </div>
       </section>
 

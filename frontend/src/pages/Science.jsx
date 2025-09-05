@@ -142,19 +142,9 @@ const Science = () => {
             Dive deeper into the science behind MyGen Wellness with our exclusive podcast and see the principles in action through our insightful video exploring the profound impact of tiny wellness activities, the concept of a wellness digital twin, and groundbreaking research on racket sports as a longevity gold standard..
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            {/* Podcast Section */}
-            <div className="bg-gray-900 rounded-lg p-8 shadow-lg flex flex-col">
-              <h3 className="text-2xl font-bold mb-4">Your Digital Twin: Hacking Longevity with Racket Sports and Precision Wellness</h3>
-              <audio controls className="w-full mb-4">
-                <source src="/audios/Racket_Sports_Podcast.m4a" type="audio/mp4" />
-                Your browser does not support the audio element.
-              </audio>
-              <p className="text-sm text-gray-400 text-center flex-grow">
-                This podcast presents a framework for generating synthetic wellness and aging data, highlighting how lifestyle factors—especially racket sports like tennis and pickleball—extend longevity. It integrates “Tiny Wellness Activities” and “Do Less” risk behaviors with biomarkers of aging, social connection, and purpose, drawing on Blue Zones research and longitudinal studies to enable precision longevity planning and evidence-based public health guidance.              </p>
-            </div>
-
             {/* Video Section */}
             <div className="bg-gray-900 rounded-lg p-8 shadow-lg flex flex-col">
+              <p className="italic text-base text-orange-300 mb-2">If you have 7 minutes, start with this video!</p>
               <h3 className="text-2xl font-bold mb-4">See MyGen in Action</h3>
               <div className="relative rounded-lg overflow-hidden shadow-xl bg-gray-800 w-full mb-4">
                 <video 
@@ -168,6 +158,19 @@ const Science = () => {
               </div>
               <p className="text-sm text-gray-400 text-left flex-grow">
                 Discover how MyGen transforms wellness through science-backed micro-habits. This video provides a visual overview of our approach, demonstrating the simplicity and effectiveness of integrating tiny wellness activities into your daily life for long-term health benefits.
+              </p>
+            </div>
+
+            {/* Podcast Section */}
+            <div className="bg-gray-900 rounded-lg p-8 shadow-lg flex flex-col">
+              <p className="italic text-base text-orange-300 mb-2">If you have 30 minutes, listen to this podcast!</p>
+              <h3 className="text-2xl font-bold mb-4">Your Digital Twin: Hacking Longevity with Racket Sports and Precision Wellness</h3>
+              <audio controls className="w-full mb-4">
+                <source src="/audios/Racket_Sports_Podcast.m4a" type="audio/mp4" />
+                Your browser does not support the audio element.
+              </audio>
+              <p className="text-sm text-gray-400 text-center flex-grow">
+                This podcast presents a framework for generating synthetic wellness and aging data, highlighting how lifestyle factors—especially racket sports like tennis and pickleball—extend longevity. It integrates “Tiny Wellness Activities” and “Do Less” risk behaviors with biomarkers of aging, social connection, and purpose, drawing on Blue Zones research and longitudinal studies to enable precision longevity planning and evidence-based public health guidance.
               </p>
             </div>
           </div>

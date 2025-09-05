@@ -30,7 +30,7 @@ const Dashboard = () => {
         </div>
 
         {/* Stats Cards */}
-        <div className="grid md:grid-cols-4 gap-6 mb-12">
+  <div className="grid md:grid-cols-5 gap-6 mb-12">
           <div className="bg-gradient-to-br from-cyan-500/10 to-teal-500/10 border border-cyan-500/20 rounded-2xl p-6">
             <div className="flex items-center gap-3 mb-4">
               <Activity className="w-8 h-8 text-cyan-400" />
@@ -65,6 +65,27 @@ const Dashboard = () => {
             </div>
             <p className="text-3xl font-bold text-orange-400">85%</p>
             <p className="text-gray-400 text-sm">Completion</p>
+          </div>
+
+          {/* Points Feature Card */}
+          <div className="bg-gradient-to-br from-yellow-400/10 to-orange-400/10 border border-yellow-400/20 rounded-2xl p-6">
+            <div className="flex items-center gap-3 mb-4">
+              <Trophy className="w-8 h-8 text-yellow-400" />
+              <h3 className="text-xl font-semibold">Points</h3>
+            </div>
+            <div className="mb-2">
+              <span className="text-lg text-yellow-400 font-bold">Points Today:</span>
+              <span className="text-2xl font-bold text-yellow-300 ml-2">12</span>
+            </div>
+            <div className="mb-2">
+              <span className="text-lg text-yellow-400 font-bold">Total Points:</span>
+              <span className="text-2xl font-bold text-yellow-300 ml-2">245</span>
+            </div>
+            <div>
+              <span className="text-lg text-orange-400 font-bold">Backed by Shirox:</span>
+              <span className="text-2xl font-bold text-orange-300 ml-2">$29</span>
+            </div>
+            <p className="text-gray-400 text-sm mt-2">Your points are backed by Shirox and can be redeemed for rewards.</p>
           </div>
         </div>
 

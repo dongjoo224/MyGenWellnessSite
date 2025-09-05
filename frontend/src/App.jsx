@@ -12,6 +12,9 @@ import Science from './pages/Science';
 import Community from './pages/Community';
 import Team from './pages/Team';
 import Dashboard from './pages/Dashboard';
+import Privacy from './pages/Privacy';
+import Terms from './pages/Terms';
+import Contact from './pages/Contact';
 import Chatbot from './components/common/Chatbot';
 import './App.css';
 
@@ -29,6 +32,9 @@ function AppContent() {
         <Route path="/community" element={<Community />} />
         <Route path="/team" element={<Team />} />
         <Route path="/media" element={<Media />} />
+        <Route path="/privacy" element={<Privacy />} />
+        <Route path="/terms" element={<Terms />} />
+        <Route path="/contact" element={<Contact />} />
         {/* Protected route - only accessible to authenticated users */}
         <Route path="/dashboard" element={
           <ProtectedRoute>
@@ -37,8 +43,8 @@ function AppContent() {
         } />
         {/* <Route path="/media" element={<div className="min-h-screen flex items-center justify-center"><h1 className="text-4xl">Media Page - Coming Soon</h1></div>} /> */}
         {/* <Route path="/contact" element={<div className="min-h-screen flex items-center justify-center"><h1 className="text-4xl">Contact Page - Coming Soon</h1></div>} /> */}
-        <Route path="/privacy" element={<div className="min-h-screen flex items-center justify-center"><h1 className="text-4xl">Privacy Page - Coming Soon</h1></div>} />
-        <Route path="/terms" element={<div className="min-h-screen flex items-center justify-center"><h1 className="text-4xl">Terms Page - Coming Soon</h1></div>} />
+        {/* <Route path="/privacy" element={<div className="min-h-screen flex items-center justify-center"><h1 className="text-4xl">Privacy Page - Coming Soon</h1></div>} /> */}
+        {/* <Route path="/terms" element={<div className="min-h-screen flex items-center justify-center"><h1 className="text-4xl">Terms Page - Coming Soon</h1></div>} /> */}
       </Routes>
       {!isLogin && <Footer />}
       {location.pathname !== '/' && <Chatbot />}

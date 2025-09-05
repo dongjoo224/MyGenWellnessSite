@@ -48,14 +48,14 @@ const Media = () => {
               Instagram
             </button>
             <button
-              onClick={() => setActiveTab('Twitter')}
+              onClick={() => setActiveTab('Facebook')}
               className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300
                 ${activeTab === 'Twitter'
                   ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg transform scale-105'
                   : 'bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white'}
               `}
             >
-              Twitter
+              Facebook
             </button>
           </div>
 
@@ -73,10 +73,10 @@ const Media = () => {
                 <iframe src='https://widgets.sociablekit.com/instagram-feed/iframe/25594957' frameBorder='0' width='100%' height='800px' className="rounded-lg"></iframe>
               </div>
             )}
-            {activeTab === 'Twitter' && (
+            {activeTab === 'Facebook' && (
               <div className="bg-gray-1000 rounded-2xl p-8 shadow-xl border border-gray-800">
-                <h2 className="text-3xl font-bold text-white mb-6 text-center gradient-text-cyan bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">Twitter Feed</h2>
-                <p className="text-gray-300 text-center">Twitter content will be coming soon. Stay tuned!</p>
+                <h2 className="text-3xl font-bold text-white mb-6 text-center gradient-text-cyan bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">Facebook Feed</h2>
+                <p className="text-gray-300 text-center">Facebook content will be coming soon. Stay tuned!</p>
               </div>
             )}
           </div>

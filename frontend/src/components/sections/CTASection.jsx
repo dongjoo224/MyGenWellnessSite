@@ -99,8 +99,8 @@ const CTASection = () => {
               </Button>
               
               <div className="cta-note flex items-center gap-2 text-gray-400">
-                <span className="text-cyan-400">👥</span>
-                <span>Join 1,000+ beta users already transforming their lives</span>
+                {/* <span className="text-cyan-400">👥</span> */}
+                <span>Join beta users already transforming their lives</span>
               </div>
             </div>
           </div>

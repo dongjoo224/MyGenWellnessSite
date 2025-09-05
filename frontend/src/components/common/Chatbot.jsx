@@ -7,7 +7,7 @@ const Chatbot = () => {
   const [messages, setMessages] = useState([
     {
       id: 1,
-      text: "I'm MyGenie, an AI assistant focused on wellness. If you have any questions about MyGen or healthy living, I can assist you. How can I help?",
+      text: "I'm MyGennie, an AI assistant focused on wellness. If you have any questions about MyGen or healthy living, I can assist you. How can I help?",
       isBot: true,
       timestamp: new Date()
     }
@@ -79,7 +79,7 @@ const Chatbot = () => {
       {/* Chat Sidebar */}
       <div className={`ai-chat-sidebar fixed top-0 right-0 w-80 h-full bg-gray-900 border-l-2 border-orange-500 shadow-2xl z-50 flex flex-col transform transition-transform duration-300 ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
         <div className="ai-chat-header bg-gradient-to-r from-orange-500 to-orange-400 text-white font-bold text-lg p-4 flex items-center justify-between border-b border-orange-400">
-          <span>MyGenie</span>
+          <span>MyGennie</span>
           <button 
             onClick={toggleSidebar}
             className="ai-chat-close text-white hover:bg-white/20 rounded-full p-1 transition-colors"
@@ -133,10 +133,10 @@ const Chatbot = () => {
       {/* Open Chat Button */}
       <button
         onClick={toggleSidebar}
-        className={`ai-chat-open-btn fixed right-9 bottom-9 z-40 bg-gradient-to-r from-orange-500 to-orange-400 hover:from-orange-600 hover:to-orange-500 text-white border-none rounded-full w-15 h-15 flex items-center justify-center text-2xl shadow-lg hover:shadow-orange-500/25 cursor-pointer transition-all duration-200 transform hover:scale-105 ${isOpen ? 'hidden' : 'flex'}`}
+  className={`ai-chat-open-btn fixed right-9 bottom-9 z-40 bg-gradient-to-r from-orange-500 to-orange-400 hover:from-orange-600 hover:to-orange-500 text-white border-none rounded-full w-16 h-16 flex items-center justify-center text-5xl shadow-lg hover:shadow-orange-500/25 cursor-pointer transition-all duration-200 transform hover:scale-105 ${isOpen ? 'hidden' : 'flex'}`}
         title="Chat with AI"
       >
-        <MessageCircle className="w-8 h-8" />
+  <MessageCircle className="w-15 h-15" />
       </button>
 
       {/* Custom styles for mobile */}

@@ -97,7 +97,7 @@ const App = () => {
             // Display login options if not authenticated
             <div className="login-section">
               <div className="text-center mb-8">
-                <h1 className="text-3xl font-bold text-white mb-2">Welcome Back</h1>
+                <h1 className="text-3xl font-bold text-white mb-2">Welcome!</h1>
                 <p className="text-gray-400">Sign in to your MyGen Wellness account</p>
               </div>
 
@@ -114,7 +114,7 @@ const App = () => {
                 onClick={login}
                 className="email-btn w-full bg-gray-800 hover:bg-gray-700 text-white py-3 rounded-xl font-semibold transition-all duration-300"
               >
-                Log in with Auth0
+                Log in or sign up
               </Button>
 
               {message && <p className="mt-4 text-center text-sm text-gray-400">{message}</p>}
@@ -126,14 +126,14 @@ const App = () => {
             </div>
           )}
           
-          <div className="mt-8 text-center">
+          {/* <div className="mt-8 text-center">
             <p className="text-gray-400 text-sm">
               Don't have an account?{' '}
               <a href="#" className="text-cyan-400 hover:text-cyan-300 transition-colors">
                 Request beta access
               </a>
             </p>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

@@ -163,7 +163,7 @@ const Dashboard = () => {
         </p>
 
 
-        {/* Video Section */}
+        {/* Video Section
       <section className="py-24 bg-gradient-to-b from-gray-900 to-black text-center">
         <div className="container mx-auto px-4 max-w-4xl">
           <h2 className="text-3xl md:text-4xl font-black leading-tight mb-8">
@@ -183,7 +183,7 @@ const Dashboard = () => {
             Discover how MyGen's customized user pathway creates a transformative wellness experience for you. 
           </p>
         </div>
-      </section>
+      </section> */}
 
         {/* Premium Features Notice */}
         <div className="mt-12 bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/20 rounded-2xl p-8 text-center">

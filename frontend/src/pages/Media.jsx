@@ -62,21 +62,21 @@ const Media = () => {
           {/* Tab Content */}
           <div>
             {activeTab === 'LinkedIn' && (
-              <div className="bg-gray-900 rounded-2xl p-8 shadow-xl border border-gray-800">
+              <div className="bg-gray-1000 rounded-2xl p-8 shadow-xl border border-gray-800">
                 <h2 className="text-3xl font-bold text-white mb-6 text-center gradient-text-blue bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">LinkedIn Posts</h2>
                 <iframe src='https://widgets.sociablekit.com/linkedin-page-posts/iframe/25594960' frameBorder='0' width='100%' height='800px' className="rounded-lg"></iframe>
               </div>
             )}
             {activeTab === 'Instagram' && (
-              <div className="bg-gray-900 rounded-2xl p-8 shadow-xl border border-gray-800">
+              <div className="bg-gray-1000 rounded-2xl p-8 shadow-xl border border-gray-800">
                 <h2 className="text-3xl font-bold text-white mb-6 text-center gradient-text-pink bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">Instagram Feed</h2>
                 <iframe src='https://widgets.sociablekit.com/instagram-feed/iframe/25594957' frameBorder='0' width='100%' height='800px' className="rounded-lg"></iframe>
               </div>
             )}
             {activeTab === 'Twitter' && (
-              <div className="bg-gray-900 rounded-2xl p-8 shadow-xl border border-gray-800">
+              <div className="bg-gray-1000 rounded-2xl p-8 shadow-xl border border-gray-800">
                 <h2 className="text-3xl font-bold text-white mb-6 text-center gradient-text-cyan bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">Twitter Feed</h2>
-                <p className="text-gray-300 text-center">Twitter embed goes here. (Note: SociableKIT might require a different embed code for Twitter or a paid plan.)</p>
+                <p className="text-gray-300 text-center">Twitter content will be coming soon. Stay tuned!</p>
               </div>
             )}
           </div>

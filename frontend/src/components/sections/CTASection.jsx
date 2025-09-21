@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import { Rocket, X, Mail, User, Phone } from 'lucide-react';
 import { Button } from '../ui/button';
 
+const GOOGLE_SHEET_WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbxtLhJzDDreGqGk1cfQgf1K-lWIKyQsw8w8kKns-eoCyutjvBu2D3eZJgjSmmck2jas/exec'; // e.g., 'https://script.google.com/macros/s/AKfycbz_aBcDeF12345/exec' 
+
+
 const CTASection = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [formData, setFormData] = useState({
@@ -32,38 +35,42 @@ const CTASection = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
+    // Combine form data with timestamp for the Google Sheet
+    const dataToSend = {
+      ...formData,
+      timestamp: new Date().toISOString()
+    };
+    
     try {
-      console.log('Sending waitlist data:', formData); // Debug log
+      console.log('Sending waitlist data to Google Sheet:', dataToSend); // Debug log
       
-      const response = await fetch('http://localhost:3001/api/waitlist', {
+      // 🚨 STEP 3 CHANGE: Updated fetch request to send data to Google Apps Script
+      const response = await fetch(GOOGLE_SHEET_WEB_APP_URL, {
         method: 'POST',
+        // IMPORTANT: Use text/plain header to bypass complex CORS preflight checks
         headers: {
-          'Content-Type': 'application/json',
+          'Content-Type': 'text/plain;charset=utf-8', 
         },
-        body: JSON.stringify({
-          ...formData,
-          timestamp: new Date().toISOString()
-        })
+        // Send the data as a stringified JSON object
+        body: JSON.stringify(dataToSend)
       });
 
       console.log('Response status:', response.status); // Debug log
-      const data = await response.json();
+      
+      // Since Google Apps Script returns text/json, we need to parse it
+      const responseText = await response.text(); 
+      const data = JSON.parse(responseText);
       console.log('Response data:', data); // Debug log
 
-      if (response.ok) {
+      if (response.ok && data.result === 'success') { // Check for the success message from the script
         alert('Thank you for registering! We\'ll be in touch soon.');
         handleCloseModal();
       } else {
-        throw new Error(data.message || 'Failed to submit registration');
+        throw new Error(data.message || 'Failed to submit registration to Google Sheet.');
       }
     } catch (error) {
       console.error('Registration error:', error);
-      // More specific error message
-      if (error.name === 'TypeError' && error.message.includes('fetch')) {
-        alert('Unable to connect to server. Please make sure the backend is running and try again.');
-      } else {
-        alert(`Registration failed: ${error.message}`);
-      }
+      alert(`Registration failed. Please try again. Error: ${error.message}`);
     } finally {
       setIsSubmitting(false);
     }

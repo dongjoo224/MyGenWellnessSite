@@ -2,6 +2,8 @@ import React, { useState, useRef, useEffect } from 'react';
 import { MessageCircle, X } from 'lucide-react';
 import { Button } from '../ui/button';
 
+const BACKEND_URL = import.meta.env.VITE_BACKEND_URL
+
 const Chatbot = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState([
@@ -48,7 +50,7 @@ const Chatbot = () => {
 
     try {
       // POST user message to backend and await AI response
-      const res = await fetch('http://localhost:3001/api/chat', {
+      const res = await fetch('https://mygenbackend.onrender.com/api/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ message: inputValue })

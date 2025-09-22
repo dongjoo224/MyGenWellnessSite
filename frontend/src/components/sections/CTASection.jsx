@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Rocket, X, Mail, User, Phone } from 'lucide-react';
 import { Button } from '../ui/button';
 
-const GOOGLE_SHEET_WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbxtLhJzDDreGqGk1cfQgf1K-lWIKyQsw8w8kKns-eoCyutjvBu2D3eZJgjSmmck2jas/exec'; // e.g., 'https://script.google.com/macros/s/AKfycbz_aBcDeF12345/exec' 
+const GOOGLE_SHEET_WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbz2HxiaGyIjsQh89jkXQBI4ErfLYtTyo97cAf8W4tD7hH2tdIyqOQgXb5mnRHk3QOST/exec'; // e.g., 'https://script.google.com/macros/s/AKfycbz_aBcDeF12345/exec' 
 
 
 const CTASection = () => {
